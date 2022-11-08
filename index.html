@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- <img class="colored" src="background_image.svg" alt="background_image"> -->
     <div class="sidebar">
         <div>
-            <img src="" alt="" class="icon">
+            <img src="odin-lined.png" alt="Odin" class="icon colored">
             <div class="icon_text">ODIN</div>
         </div>
     </div>
@@ -23,7 +24,33 @@
         <div class="text">
             <p>You know you want to.</p>
         </div>
-        <form action="#"></form>
+        <form action="#">
+            <div class="input">
+                <label for="firstName">FIRST NAME:</label>
+                <input type="text" name="firstName" id="firstName" required>
+            </div>
+            <div class="input">
+                <label for="lastName">FIRST NAME:</label>
+                <input type="text" name="lastName" id="lastName" required>
+            </div>
+            <div class="input">
+                <label for="emailAdress">EMAIL:</label>
+                <input type="email" name="emailAdress" id="emailAdress" required>
+            </div>
+            <div class="input">
+                <label for="phoneNumber">PHONE NUMBER:</label>
+                <input type="tel" name="phoneNumber" id="phoneNumber">
+            </div>
+            <div class="input">
+                <label for="pass">PASSWORD:</label>
+                <input type="password" name="pass" id="pass" required>
+            </div>
+            <div class="input">
+                <label for="confirm-pass">REPEAT PASSWORD:</label>
+                <input type="password" name="confirm-pass" id="confirm-pass" required>
+            </div>
+            <button type="submit">Create Account</button>
+        </form>
         <p class="alternative">
             Already have an account? <a href="">Log in</a>
         </p>
