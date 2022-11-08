@@ -1,0 +1,8 @@
+:root {
+    --main-color: #00a4d6;
+}
+
+.colored {
+    filter: invert(39%) sepia(85%) saturate(1891%) hue-rotate(165deg) brightness(99%) contrast(104%);
+    border: solid;
+}
