@@ -29,28 +29,29 @@
             <form action="#">
                 <p class="form-title">Let's do this!</p>
                 <div class="input">
-                    <label for="firstName">FIRST NAME:</label>
-                    <input type="text" name="firstName" id="firstName" required>
+                    <label for="firstName">FIRST NAME:<span aria-label="required">*</span></label>
+                    <input type="text" name="firstName" id="firstName" placeholder="Ilia" required>
+                    
                 </div>
                 <div class="input">
-                    <label for="lastName">FIRST NAME:</label>
-                    <input type="text" name="lastName" id="lastName" required>
+                    <label for="lastName">LAST NAME:<span aria-label="required">*</span></label>
+                    <input type="text" name="lastName" id="lastName" placeholder="Bochkov" required>
                 </div>
                 <div class="input">
-                    <label for="emailAdress">EMAIL:</label>
-                    <input type="email" name="emailAdress" id="emailAdress" required>
+                    <label for="emailAdress">EMAIL:<span aria-label="required">*</span></label>
+                    <input type="email" name="emailAdress" id="emailAdress" placeholder="ilya.bochkov97@gmail.com" required>
                 </div>
                 <div class="input">
                     <label for="phoneNumber">PHONE NUMBER:</label>
-                    <input type="tel" name="phoneNumber" id="phoneNumber">
+                    <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="+358...">
                 </div>
                 <div class="input">
-                    <label for="pass">PASSWORD:</label>
-                    <input type="password" name="pass" id="pass" required>
+                    <label for="pass">PASSWORD:<span aria-label="required">*</span></label>
+                    <input type="password" name="pass" id="pass" placeholder=" " required>
                 </div>
                 <div class="input">
-                    <label for="confirm-pass">REPEAT PASSWORD:</label>
-                    <input type="password" name="confirm-pass" id="confirm-pass" required>
+                    <label for="confirm-pass">REPEAT PASSWORD:<span aria-label="required">*</span></label>
+                    <input type="password" name="confirm-pass" id="confirm-pass" placeholder=" " required>
                 </div>
                 <button type="submit">Create Account</button>
             </form>

@@ -3,6 +3,10 @@
     --second-background-color: #ffffff;
     --third-background-color: rgba(0, 0, 0, 0.7);
     --main-font-color: #000000;
+    --input-focus-color: #00a4d6;
+    --input-valid-color: rgb(45, 167, 45);
+    --input-invalid-color: rgb(255, 69, 100);
+
     font-size: 22px;
 }
 
@@ -139,6 +143,28 @@ form > div {
 
 form input {
     height: 30px;
+    border: 1px solid;
+    border-radius: 5px;
+    outline: none;
+    padding: 2px;
+}
+
+
+
+input:invalid {
+    border: 2px solid var(--input-invalid-color);
+}
+
+input:valid {
+    border: 2px solid var(--input-valid-color);
+}
+
+input:placeholder-shown:focus {
+    border: 2px solid var(--input-focus-color);
+}
+
+input:placeholder-shown {
+    border: 1px solid;
 }
 
 .input {
