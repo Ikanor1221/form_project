@@ -24,7 +24,6 @@ p + p {
 
 .colored_image {
     filter: invert(52%) sepia(36%) saturate(5285%) hue-rotate(162deg) brightness(96%) contrast(101%);
-    /* border: solid; */
 }
 
 body {
@@ -62,7 +61,6 @@ body {
 }
 
 .icon {
-    /* width: auto; */
     height: 140px;
 
 }
@@ -74,17 +72,10 @@ body {
     align-items: center;
     border: 1px solid var(--main-font-color);
     border-left: none;
-    /* gap: 10%; */
-
-    /* background-image: url("background_image.svg");
-    background-repeat:no-repeat;
-    background-position: center center;
-    background-size: cover; */
 }
 
 .content-block {
     width: 90%;
-    /* font-size: 1.5rem; */
     padding: 10px;
     background-color: var(--third-background-color);
     border-radius: 10px;
@@ -114,6 +105,14 @@ button {
     border-radius: 10px;
     color: var(--second-background-color);
     font-weight: 700;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .content_ribbon {
@@ -155,6 +154,7 @@ input:invalid {
     border: 2px solid var(--input-invalid-color);
 }
 
+
 input:valid {
     border: 2px solid var(--input-valid-color);
 }
@@ -174,4 +174,8 @@ input:placeholder-shown {
 .form-title {
     grid-column-start: 1;
     grid-column-end: 3;
+}
+
+input.error {
+    border: 2px solid var(--input-invalid-color);
 }

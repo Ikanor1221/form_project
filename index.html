@@ -7,9 +7,9 @@
     <title>Form</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
-    <!-- <img class="colored_image" src="background_image.svg" alt="background_image"> -->
     <div class="sidebar">
         <div>
             <img src="odin-lined.png" alt="Odin" class="icon">
@@ -23,15 +23,12 @@
                 <p>This is not a real online service! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, commodi!</p>
                 <p>Sign up now to get started.</p>
             </div>
-            <!-- <div class="text">
-                <p>You know you want to.</p>
-            </div> -->
             <form action="#">
                 <p class="form-title">Let's do this!</p>
                 <div class="input">
                     <label for="firstName">FIRST NAME:<span aria-label="required">*</span></label>
                     <input type="text" name="firstName" id="firstName" placeholder="Ilia" required>
-                    
+                    <span></span>
                 </div>
                 <div class="input">
                     <label for="lastName">LAST NAME:<span aria-label="required">*</span></label>
@@ -47,18 +44,20 @@
                 </div>
                 <div class="input">
                     <label for="pass">PASSWORD:<span aria-label="required">*</span></label>
-                    <input type="password" name="pass" id="pass" placeholder=" " required>
+                    <input type="password" name="pass" id="pass" placeholder=" " minlength="5"  required>
+                    <span>(min 5 characters)</span>
                 </div>
                 <div class="input">
                     <label for="confirm-pass">REPEAT PASSWORD:<span aria-label="required">*</span></label>
                     <input type="password" name="confirm-pass" id="confirm-pass" placeholder=" " required>
                 </div>
-                <button type="submit">Create Account</button>
+                <button id="submitButton" type="submit">Create Account</button>
             </form>
             <div class="alternative">
                 <p>Already have an account? <a href="">Log in</a></p>
             </div>
         </div>
     </main>
+    <script src="javascript.js"></script>
 </body>
 </html>
