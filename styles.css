@@ -1,8 +1,7 @@
 :root {
-    --main-background-color: #00a4d6;
+    --first-background-color: rgba(0, 0, 0, 0.7);
     --second-background-color: #ffffff;
-    --third-background-color: rgba(0, 0, 0, 0.7);
-    --main-font-color: #000000;
+    --main-border-color: #000000;
     --input-focus-color: #00a4d6;
     --input-valid-color: rgb(45, 167, 45);
     --input-invalid-color: rgb(255, 69, 100);
@@ -30,7 +29,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 4fr;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -39,7 +38,7 @@ body {
     background-position: center center;
     background-size: cover;
     border: 1px solid black;
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     grid-template: 6fr auto 8fr / 1fr;
     grid-template-areas: 
@@ -50,7 +49,7 @@ body {
 
 .sidebar > div {
     grid-area: a;
-    background-color: var(--third-background-color);
+    background-color: var(--first-background-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,7 +61,6 @@ body {
 
 .icon {
     height: 140px;
-
 }
 
 .content {
@@ -70,21 +68,21 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid var(--main-font-color);
+    border: 1px solid var(--main-border-color);
     border-left: none;
+    gap: max(10px, 5vh);
 }
 
 .content-block {
-    width: 90%;
     padding: 10px;
-    background-color: var(--third-background-color);
+    background-color: var(--first-background-color);
     border-radius: 10px;
     display: grid;
+    width: 90%;
     gap: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);;
-    border: 1px solid var(--main-font-color);
-    margin-top: auto;
-    margin-bottom: auto;
+    border: 1px solid var(--main-border-color);
+    margin-bottom: 10px;
 }
 
 .content-block > * {
@@ -92,15 +90,15 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
-    border: 1px solid var(--main-font-color);
+    border: 1px solid var(--main-border-color);
     overflow: auto;
     padding: 20px;
 }
 
 button {
     height: 50px;
-    width: 300px;
-    background-color: var(--third-background-color);
+    width: 100%;
+    background-color: var(--first-background-color);
     border: none;
     border-radius: 10px;
     color: var(--second-background-color);
@@ -116,7 +114,7 @@ button:active {
 }
 
 .content_ribbon {
-    background-color: var(--third-background-color);
+    background-color: var(--first-background-color);
     display: flex;
     justify-content: center;
     width: 100%;
@@ -178,4 +176,107 @@ input:placeholder-shown {
 
 input.error {
     border: 2px solid var(--input-invalid-color);
+}
+
+
+@media screen and (max-width: 850px) {
+  
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 300px auto;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    
+    .sidebar {
+        background-image: url("background_image3.jpg");
+        background-repeat:no-repeat;
+        background-position: center center;
+        background-size: cover;
+        border: none;
+        min-height: 20px;
+        display: grid;
+        grid-template: auto auto auto / 1fr;
+        grid-template-areas: 
+        "."
+        "a"
+        ".";
+    }
+    
+    .sidebar > div {
+        grid-area: a;
+        background-color: var(--first-background-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 3.5rem;
+        color: var(--second-background-color);
+        padding: 10px;
+    }
+    
+    .icon {
+        height: 140px;
+    }
+  
+    .content {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 0px;
+        border: none;
+        gap: 0px;
+    }
+
+    .content-block {
+        padding: 10px;
+        background-color: var(--first-background-color);
+        border-radius: 10px;
+        display: grid;
+        gap: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);;
+        border: none;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .content-block > * {
+        background-color: var(--second-background-color);
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+        border: 1px solid var(--main-border-color);
+        overflow: scroll;
+        padding: 20px;
+    }
+
+    form {
+        display: grid;
+        flex-direction: column;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+
+    }
+
+    .form-title {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    
+    
+    form > div {
+    display: flex;
+    flex-direction: column;
+    }
+
+    form input {
+        height: 30px;
+        border: 1px solid;
+        border-radius: 5px;
+        outline: none;
+        padding: 2px;
+    }
+
 }
